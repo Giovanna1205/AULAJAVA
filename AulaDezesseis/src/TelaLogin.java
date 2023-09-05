@@ -29,13 +29,24 @@ public class TelaLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnNovaSenha = new javax.swing.JLabel();
+        txtLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         pwdSenha = new javax.swing.JPasswordField();
-        txtNovaSenha = new javax.swing.JLabel();
         btnLogin = new javax.swing.JButton();
+        txtSenhaNova = new javax.swing.JLabel();
+
+        btnNovaSenha.setText("ESQUECEU A SENHA?");
+        btnNovaSenha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNovaSenhaMouseClicked(evt);
+            }
+        });
+
+        txtLogin.setText("ESQUECEU A SENHA?");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,10 +62,9 @@ public class TelaLogin extends javax.swing.JFrame {
             }
         });
 
-        txtNovaSenha.setText("ESQUECEU A SENHA?");
-        txtNovaSenha.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txtNovaSenhaMouseClicked(evt);
+        pwdSenha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pwdSenhaActionPerformed(evt);
             }
         });
 
@@ -62,6 +72,13 @@ public class TelaLogin extends javax.swing.JFrame {
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLoginActionPerformed(evt);
+            }
+        });
+
+        txtSenhaNova.setText("ESQUECEU A SENHA?");
+        txtSenhaNova.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtSenhaNovaMouseClicked(evt);
             }
         });
 
@@ -83,12 +100,11 @@ public class TelaLogin extends javax.swing.JFrame {
                             .addComponent(txtUsuario)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(157, 157, 157)
-                        .addComponent(btnLogin)))
+                        .addComponent(btnLogin))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(142, 142, 142)
+                        .addComponent(txtSenhaNova)))
                 .addContainerGap(26, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(txtNovaSenha)
-                .addGap(138, 138, 138))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -103,9 +119,9 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
                     .addComponent(pwdSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
-                .addComponent(txtNovaSenha)
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
+                .addComponent(txtSenhaNova)
+                .addGap(26, 26, 26)
                 .addComponent(btnLogin)
                 .addContainerGap(55, Short.MAX_VALUE))
         );
@@ -117,9 +133,9 @@ public class TelaLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtUsuarioActionPerformed
 
-    private void txtNovaSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtNovaSenhaMouseClicked
+    private void btnNovaSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNovaSenhaMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNovaSenhaMouseClicked
+    }//GEN-LAST:event_btnNovaSenhaMouseClicked
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
@@ -134,6 +150,18 @@ public class TelaLogin extends javax.swing.JFrame {
             
     }
     }//GEN-LAST:event_btnLoginActionPerformed
+
+    private void pwdSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pwdSenhaActionPerformed
+
+    private void txtSenhaNovaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtSenhaNovaMouseClicked
+        // TODO add your handling code here:
+         
+             TelaNovaSenha telaNovaSenha = new TelaNovaSenha();
+             telaNovaSenha.setVisible(true);
+         
+    }//GEN-LAST:event_txtSenhaNovaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -172,11 +200,13 @@ public class TelaLogin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JLabel btnNovaSenha;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPasswordField pwdSenha;
-    private javax.swing.JLabel txtNovaSenha;
+    private javax.swing.JButton txtLogin;
+    private javax.swing.JLabel txtSenhaNova;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 }
